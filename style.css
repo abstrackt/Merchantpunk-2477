@@ -1,10 +1,10 @@
 .container_index {
     margin: auto;
     display: grid;
-    grid-template-columns: [firstl] 10% [secondl] 10% [midl] auto [midr] 10% [secondr] 10% [firstr];
+    grid-template-columns: [firstl] auto [firstr];
     grid-template-rows: auto [title] auto [subtitle] auto [subtitleend] auto [playbutton] auto [topscores] auto [bott] auto;
-    height: 97.5vh;
-    width: 99vw;
+    height: auto;
+    width: 98vw;
 }
 
 .container_index > div {
@@ -13,13 +13,12 @@
 }
 
 .container_maingame {
-    margin: auto;
-    margin-top: 10vh;
+    margin: 10vh auto;
     display: grid;
     grid-template-columns: [ledge] 20% [ltoolbar] auto [gamescreen] 20% [redge];
-    grid-template-rows: [tedge] 20% [gamescreen] auto [bottombar] 10% [bedge];
+    grid-template-rows: [tedge] 20% [gamescreen] auto [bottombar] 15% [bedge];
     grid-gap: 15px;
-    height: 80vh;
+    height: 28vw;
     width: 70vw;
 }
 
@@ -29,7 +28,7 @@
     grid-row: gamescreen / bedge;
     background-color: #aaaaaa;
     grid-template-columns: [ledge] auto [mid] auto [redge];
-    grid-template-rows: [tedge] 85% [bottombar] auto [bedge];
+    grid-template-rows: [tedge] 80% [bottombar] auto [bedge];
     grid-gap: 15px;
 }
 
@@ -70,10 +69,27 @@
     background-color: #aaaaaa;
     border-radius: 15px;
     width: 80%;
-    height: 300px;
+    height: 32vh;
     overflow-y: auto;
+    overflow-x: auto;
     margin: auto;
     text-align: left;
+}
+
+.smallverticalmenu {
+    padding: 10px;
+    background-color: #aaaaaa;
+    border-radius: 15px;
+    width: 80%;
+    height: 15vh;
+    overflow-y: auto;
+    overflow-x: auto;
+    margin: auto;
+    text-align: left;
+}
+
+.glitched p {
+    font-size: 80%;
 }
 
 .list1{
@@ -81,7 +97,7 @@
     padding: 20px;
     background-color: #dddddd;
     border-radius: 15px;
-    width: 25%;
+    width: 600px;
     height: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -107,13 +123,13 @@
 }
 
 .info1 {
+    height: auto;
     font-size: 15px;
     font-weight: 300;
     padding: 10px;
     text-align: justify;
     border-radius: 15px;
     background-color: #aaaaaa;
-    height: auto;
 }
 
 .info2 {
@@ -121,8 +137,8 @@
     padding: 20px;
     background-color: #dddddd;
     border-radius: 15px;
-    width: 25%;
-    height: 87%;
+    width: 450px;
+    height: 800px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2%;
@@ -134,7 +150,7 @@
     padding: 5px;
     border-radius: 15px;
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 300;
     margin: 0 3%;
 }
@@ -149,6 +165,7 @@
 }
 
 .topbar {
+    font-size: 300%;
     grid-column: ltoolbar / gamescreen;
     grid-row: tedge / gamescreen;
 }
@@ -233,6 +250,17 @@
     width: 20vw;
 }
 
+.maintitle {
+    color: #b9ca45;
+    text-shadow: -4px 4px #111111;
+    font-size: 6vw;
+    font-weight: 300;
+    font-family: "Permanent Marker", cursive;
+    line-height: 0;
+    margin-bottom: 0;
+    margin-top: 5%;
+}
+
 .startbutton:hover {
     background-color: rgba(80,0,60,0.5);
 }
@@ -313,7 +341,7 @@ body {
 
 input {
     font-family: 'Cairo', sans-serif;
-    font-size: 25px;
+    font-size: 1.5vw;
     border: none;
     background-color: #aaaaaa;
     padding: 10px;
@@ -378,6 +406,7 @@ b {
 .menu1 {
     display: inline-table;
     width: 100%;
+    overflow-x: auto;
     text-align: center;
     border: none;
     border-collapse: collapse;
@@ -394,14 +423,14 @@ b {
 }
 
 .menu1 td {
-    width: 40%;
+    width: auto;
     padding: 0.5vh;
     font-size: 15px;
     text-align: center;
 }
 
 .menu1 td a {
-    width: 100%;
+    width: auto;
     color: #dddddd;
     text-align: center;
     text-decoration: none;
@@ -607,5 +636,269 @@ b {
     100% {
         transform: none;
         opacity: 0.25;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    input {
+        font-family: 'Cairo', sans-serif;
+        font-size: 5vw;
+        border: none;
+        background-color: #aaaaaa;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .glitched {
+        color: rgba(188,230,0,1);
+        text-shadow: -4px 4px #111111;
+        font-size: 10vw;
+        font-weight: 300;
+        font-family: "Permanent Marker", cursive;
+        line-height: 0;
+        margin-bottom: 0;
+        animation: glitch1 0.5s infinite;
+    }
+
+    .startbutton {
+        text-align: center;
+        font-size: 12vw;
+        border-collapse: collapse;
+        text-decoration: none;
+        padding: 0 4vw;
+        border-radius: 1.2vw;
+        border: none;
+        outline: none;
+        background: none;
+        color: #b9ca45;
+        font-family: "Permanent Marker", cursive;
+        text-shadow: -4px 4px #111111;
+        transition: background-color 1.2s;
+        animation: pulse 2s infinite;
+        width: 60vw;
+    }
+
+    .scoretable {
+        display: inline-table;
+        width: 90%;
+        height: auto;
+        text-align: center;
+        border: none;
+        border-collapse: collapse;
+        font-family: 'Cairo', sans-serif;
+        font-weight: 300;
+        color: #dddddd;
+    }
+
+    .scoretable th {
+        color: #b9ca45;
+        font-family: "Permanent Marker", cursive;
+        text-shadow: -4px 4px #111111;
+        font-size: 6vw;
+        padding: 2vh;
+        text-align: center;
+    }
+
+    .scoretable td {
+        width: 40%;
+        padding: 0.5vh;
+        font-size: 4vw;
+        text-align: center;
+    }
+
+    .scoretable td a {
+        width: 100%;
+        color: #dddddd;
+        text-align: center;
+        text-decoration: none;
+        transition: color 1.2s;
+    }
+
+    .scoretable td a:hover {
+        color: #b9ca45;
+    }
+
+    .scoretable tr {
+        transition: background-color 1.2s;
+    }
+
+    .scoretable tr.header:hover {
+        background: none;
+    }
+
+    .scoretable tr:hover {
+        background-color: rgba(80,30,60,0.5);
+    }
+
+    .verticalmenu {
+        padding: 10px;
+        background-color: #aaaaaa;
+        border-radius: 15px;
+        width: 80%;
+        height: 32vh;
+        overflow-y: auto;
+        overflow-x: auto;
+        margin: auto;
+        text-align: left;
+    }
+
+    .smallverticalmenu {
+        padding: 10px;
+        background-color: #aaaaaa;
+        border-radius: 15px;
+        width: 80%;
+        height: 10vh;
+        overflow-y: auto;
+        overflow-x: auto;
+        margin: auto;
+        text-align: left;
+    }
+
+    .maintitle {
+        color: #b9ca45;
+        text-shadow: -4px 4px #111111;
+        font-size: 100%;
+        font-weight: 300;
+        font-family: "Permanent Marker", cursive;
+        line-height: 0;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+
+    .list1{
+        display: block;
+        padding: 20px;
+        background-color: #dddddd;
+        border-radius: 15px;
+        width: 80%;
+        height: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+    }
+
+    .popup {
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 30px;
+        width: 80%;
+        height: 60%;
+        opacity: 0.8;
+        text-align: center;
+        color: #111111;
+        background-color: #dddddd;
+    }
+
+
+    .info2 {
+        display: block;
+        padding: 20px;
+        background-color: #dddddd;
+        border-radius: 15px;
+        width: 80%;
+        height: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+    }
+
+
+    .button {
+        display: block;
+        width: 35%;
+        font-size: 6vw;
+        margin: 10% auto auto;
+        text-decoration: none;
+        color: #dddddd;
+        background-color: #aaaaaa;
+        transition: background-color 1.2s;
+        padding: 5px;
+        border-radius: 15px;
+    }
+
+    .container_maingame {
+        margin: 0 0;
+        display: grid;
+        grid-template-columns: [ledge] auto [redge];
+        grid-template-rows: [tedge] auto [gamescreen] 1100% [gamescreenend] 800% [planet] 800% [ship] auto [bottombar] auto [bedge];
+        grid-gap: 15px;
+        width: 100%;
+    }
+
+    .container_gamescreen {
+        display: grid;
+        grid-column: ledge / redge;
+        grid-row: gamescreen / gamescreenend;
+        background-color: #aaaaaa;
+        grid-template-columns: [ledge] auto [redge];
+        grid-template-rows: [tedge] 40% [mid] 47% [bottombar] auto [bedge];
+        grid-gap: 15px;
+    }
+
+    .cargoscreen {
+        font-size: 20px;
+        font-weight: 300;
+        text-align: justify;
+        grid-column: ledge / redge;
+        grid-row: mid / bottombar;
+        background-color: #dddddd;
+    }
+
+
+    .station {
+        grid-column: ledge / redge;
+        grid-row: tedge / mid;
+        background-color: #dddddd;
+    }
+
+    .statusbar {
+        grid-column: ledge / redge;
+        grid-row: bottombar / bedge;
+        background-color: #dddddd;
+    }
+
+    .planetbar {
+        grid-column: ledge / redge;
+        grid-row: gamescreenend / planet;
+        background-color: #dddddd;
+    }
+
+    .topbar {
+        grid-column: ledge / redge;
+        grid-row: tedge / gamescreen;
+    }
+
+    .shipbar {
+        grid-column: ledge / redge;
+        grid-row: planet / ship;
+        background-color: #dddddd;
+    }
+
+    .title {
+        grid-column: firstl / firstr;
+        grid-row: title / subtitle;
+        text-align: center;
+        padding-bottom: 2vw;
+    }
+
+    .subtitle {
+        grid-column: firstl / firstr;
+        grid-row: subtitle / subtitleend;
+        text-align: center;
+    }
+
+    .playbutton {
+        margin-top: 2vw;
+        grid-column: firstl / firstr;
+        grid-row: playbutton / topscores;
+        text-align: center;
+    }
+
+    .highscores {
+        grid-column: firstl / firstr;
+        grid-row: topscores / bott;
+        text-align: center;
     }
 }
