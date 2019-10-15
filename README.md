@@ -13,4 +13,4 @@ Your aim is to accumulate as much money as you can by transporting goods between
 
 <img src="https://i.imgur.com/R8XZA4F.png">
 
-Since the game requires the server to function you would need to run your own server and install the necessary modules if you'd want to play the game yourself. All code and Selenium tests are available in the repo.
+Since the game requires the server to function you would need to run your own instance and install the necessary modules if you'd want to play the game yourself. All code and Selenium tests are available in the repo.
