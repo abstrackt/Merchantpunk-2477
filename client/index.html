@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Merchantpunk 2477</title>
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+</head>
+<body>
+<audio autoplay controls loop hidden id="music">
+    <source src="assets/audio/intro.mp3" type="audio/mp3">
+</audio>
+<div class="container_index">
+    <div class="title">
+        <h1 class="glitched">
+            Merchantpunk
+        </h1>
+        <h1 class="glitched">
+            Merchantpunk
+        </h1>
+        <h1 class="glitched">
+            Merchantpunk
+        </h1>
+    </div>
+    <div class="subtitle">
+        <h1 class="glitched"
+            style="font-family: 'East Sea Dokdo', cursive; font-size: 6vw;">
+            은하계 카우보이
+        </h1>
+        <h1 class="glitched"
+            style="font-family: 'East Sea Dokdo', cursive; font-size: 6vw;">
+            은하계 카우보이
+        </h1>
+        <h1 class="glitched"
+            style="font-family: 'East Sea Dokdo', cursive; font-size: 6vw;">
+            은하계 카우보이
+        </h1>
+    </div>
+    <div class="playbutton" id="buttons">
+        <!-- Buttons get generated here -->
+    </div>
+    <div class="highscores">
+        <table class="scoretable" id="highscores">
+        </table>
+    </div>
+</div>
+<div id="popup1" class="overlay">
+    <div class="popup">
+        <div class="nickname">
+            <p>What is your name, space cowboy?</p>
+            <input type="text" id="game_nick" value=""><br>
+            <a class="button" id="submit">Proceed</a>
+            <a class="close" href="#">&times;</a>
+        </div>
+    </div>
+</div>
+
+<div id="popup2" class="overlay">
+    <div class="popup">
+        <div class="nickname">
+            <p id="signup_result">Create your account.</p>
+            <input type="text" id="signup_nick" placeholder="Username" value="" style="margin-bottom: 2vw" required><br>
+            <input type="text" id="signup_pwd" placeholder="Password" value="" required><br>
+            <a class="button" id="signup">Sign up</a>
+            <a class="close" href="#">&times;</a>
+        </div>
+    </div>
+</div>
+
+<div id="popup3" class="overlay">
+    <div class="popup">
+        <div class="nickname">
+            <p id="login_result">Access your account.</p>
+            <input type="text" id="login_nick" placeholder="Username" value="" style="margin-bottom: 2vw" required><br>
+            <input type="text" id="login_pwd" placeholder="Password" value="" required><br>
+            <a class="button" id="login">Log in</a>
+            <a class="close" href="#">&times;</a>
+        </div>
+    </div>
+</div>
+
+<div id="popup4" class="overlay">
+    <div class="popup" style="height: 80%; margin-top: 5%">
+        <div class="nickname">
+            <br><input type="file" id="preset_selector" style="width: 80%;" required><br><br>
+            <input type="text" id="preset_name" placeholder="Preset name" value="" required><br>
+            <a class="button" id="send_preset">Upload</a>
+            <p style="display: inline-block; font-size: 20px">Current: </p>
+            <p class="button" style="display: inline-block; background-color: #aaaaaa; font-size: 20px" id="current_preset"></p>
+        </div>
+        <div class="verticalmenu" style="height: 20%; width: 70%;">
+            <table class="menu1" id="preset_menu">
+                <!-- Current presets are generated here -->
+            </table>
+        </div>
+        <a class="close" href="#">&times;</a>
+    </div>
+</div>
+
+<script type="text/javascript" src="./build/src/bundle2.js"></script>
+</body>
+</html>
+

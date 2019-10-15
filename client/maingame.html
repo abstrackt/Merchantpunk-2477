@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gamescreen</title>
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+</head>
+<body>
+<audio autoplay controls loop hidden id="music">
+    <source src="assets/audio/gamemusic.mp3" type="audio/mp3">
+</audio>
+
+<div class="container_maingame">
+    <div class="planetbar" id="current_planet">
+        <!-- Planet bar is generated here -->
+    </div>
+    <div class="container_gamescreen">
+        <div class="cargoscreen">
+            <a class="button" style="width: 60%; font-weight: 900; background-color: #888888;" id ="in_bay"> In cargo bay: </a>
+            <a class="button" style="display: inline-block; margin-bottom: 5%; width: 10%; font-weight: 900;" id ="sell_product" onload="buttonSound2()"> - </a>
+            <p class="button" style="display: inline-block; background-color: #aaaaaa;" id="current_product"></p>
+            <a class="button" style="display: inline-block; margin-bottom: 5%; width: 10%; font-weight: 900;" id="buy_product"> + </a>
+            <div class="verticalmenu">
+                <table class="menu1" id="buy_menu">
+                    <!-- Current planet's resources are generated here -->
+                </table>
+            </div>
+        </div>
+        <div class="map" id="map">
+            <div class="background" id="background">
+                <!-- Interactive map gets generated here -->
+            </div>
+        </div>
+        <div class="timebar" id="timebar">
+            <a class="button" style="display: inline-block; width: 45%; margin-top: 1%; font-weight: 900;" id ="time">  </a>
+            <a class="button" style="display: inline-block; width: 45%; margin-top: 1%; font-weight: 900;" id="money">1000$</a>
+            <!-- Time and money info goes here -->
+        </div>
+        <div class="statusbar" style="font-size: 15px">
+            <a class="button" id="log_out"
+               style="width: 80%; height: auto; margin-top: 1.5%; vertical-align: middle">Wyloguj
+            </a>
+        </div>
+    </div>
+    <div class="topbar">
+        <div class="maintitle">
+            Merchantpunk
+        </div>
+    </div>
+    <div class="shipbar" id="current_starship">
+        <!-- Generated starship info goes here -->
+    </div>
+</div>
+
+<div id="planetdetails" class="overlay">
+    <div class="info2">
+        <div class="popuptext">
+            <img style="width: 100%" id="lookup_image">
+            <h2 style="font-size: 50px; line-height: 10px;" id="lookup_planetname"></h2>
+        </div>
+        <div class="smallverticalmenu" style="height: 26%">
+            <table class="menu1" id="lookup_buymenu">
+                <!-- Generated resource list goes here -->
+            </table>
+        </div>
+        <a class="close" href="#">&times;</a>
+    </div>
+</div>
+
+<div id="navigation" class="overlay">
+    <div class="list1">
+        <div class="popuptext">
+            <h2 style="font-size: 50px; line-height: 10px;">Flota</h2>
+            <p style="font-size: 20px;">Zarządzaj swoimi statkami.</p>
+        </div>
+        <div class="verticalmenu" style="height: 65%; width: 70%;">
+            <table class="menu1" id="starship_list">
+                <!-- Generated ship list goes here -->
+            </table>
+        </div>
+        <a class="close" href="#">&times;</a>
+    </div>
+</div>
+
+<div id="takeoff" class="overlay">
+    <div class="list1">
+        <div class="popuptext">
+            <h2 style="font-size: 50px; line-height: 10px;">Pas startowy</h2>
+            <p style="font-size: 20px;">Wybierz cel podróży.</p>
+            <a class="button" style="display: inline-block; margin-bottom: 0; width: 50px; font-weight: 900;" id="prev_destination"> < </a>
+            <p class="button" style="display: inline-block; background-color: #aaaaaa;" id="destination"></p>
+            <a class="button" style="display: inline-block; margin-bottom: 0; width: 50px; font-weight: 900;" id="next_destination"> > </a>
+            <a class="button" id="takeoff_button"
+               style="width: 40%; font-size: 25px; margin-bottom: 5%">Start
+            </a>
+        </div>
+        <div class="verticalmenu" style="height: 30%">
+            <table class="menu1" id="planets_list">
+                <!-- Generated planet list goes here -->
+            </table>
+        </div>
+        <a class="close" href="#" id="close">&times;</a>
+    </div>
+</div>
+
+<div id="cargo_bay" class="overlay">
+    <div class="info2" style="height: 65%">
+        <div class="popuptext">
+            <img src="" id="cargo_starship" style="width: 60%">
+            <!-- Current starship icon goes here -->
+        </div>
+        <div class="smallverticalmenu" style="height: 48%; width: 50%">
+            <table class="menu1" id="cargo_list">
+                <!-- Generated cargo list goes here -->
+            </table>
+        </div>
+        <a class="close" href="#">&times;</a>
+    </div>
+</div>
+
+<div id="endgame_popup" class="overlay">
+    <div class="info2" style="height: 30%; margin-top: 15%;">
+        <div class="popuptext">
+            <h2>Twój wynik:</h2>
+            <h1 id="score"></h1>
+            <a class="button" id="return_button" href="index.html"
+               style="width: 40%; font-size: 25px; margin-bottom: 5%">Powrót
+            </a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="./build/src/bundle1.js"></script>
+
+</body>
+</html>
