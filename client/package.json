@@ -1,0 +1,38 @@
+{
+  "name": "merchantpunk-2477",
+  "version": "1.0.0",
+  "description": "WWW App course project - Typescript based game about hardships of selling cola and snacks in the outer space.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/express": "^4.16.1",
+    "@types/mocha": "^5.2.6",
+    "@types/selenium-webdriver": "^4.0.0",
+    "chai": "^4.2.0",
+    "express": "^4.17.0",
+    "mocha": "^6.1.4",
+    "mocha-webdriver": "^0.1.13",
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
+  },
+  "scripts": {
+    "test": "mocha -r ts-node/register test/selenium/selenium_tests.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abstrackt/Merchantpunk-2477.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abstrackt/Merchantpunk-2477/issues"
+  },
+  "homepage": "https://github.com/abstrackt/Merchantpunk-2477#readme"
+}
