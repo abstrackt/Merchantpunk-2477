@@ -15,7 +15,7 @@
     "@types/mocha": "^5.2.6",
     "@types/selenium-webdriver": "^4.0.0",
     "chai": "^4.2.0",
-    "express": "^4.17.0",
+    "express": "^4.17.3",
     "mocha": "^6.1.4",
     "mocha-webdriver": "^0.1.13",
     "selenium-webdriver": "^4.0.0-alpha.1",
