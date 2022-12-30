@@ -16,8 +16,8 @@
     "@types/selenium-webdriver": "^4.0.0",
     "chai": "^4.2.0",
     "express": "^4.17.0",
-    "mocha": "^6.1.4",
-    "mocha-webdriver": "^0.1.13",
+    "mocha": "^10.2.0",
+    "mocha-webdriver": "^0.2.11",
     "selenium-webdriver": "^4.0.0-alpha.1",
     "ts-node": "^8.1.0",
     "typescript": "^3.4.5"
